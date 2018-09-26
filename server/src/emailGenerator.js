@@ -1,5 +1,8 @@
 const nodemailer = require('nodemailer')
-var config = require('./config/config')
+var config = {
+userMail:"apartmanidjurovic@gmail.com",
+passMail:"4zuxumkv"
+}
 
 module.exports = {
   async sendWelcomeEmail (user, ctx) {
