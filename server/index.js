@@ -10,7 +10,8 @@ const server = new GraphQLServer({
     ...req,
     db: new Prisma({
       typeDefs: 'generated-schema.graphql',
-      endpoint: 'http://localhost:4466/naperg/dev'
+      // endpoint: 'http://localhost:4466/naperg/dev'
+      endpoint: 'https://eu1.prisma.sh/williamimoh/skiscool/dev'
     })
   })
 })

@@ -1,5 +1,5 @@
-# source: http://localhost:4466/naperg/dev
-# timestamp: Sun Aug 12 2018 20:42:20 GMT-0700 (PDT)
+# source: https://eu1.prisma.sh/williamimoh/server/dev
+# timestamp: Wed Sep 26 2018 19:34:22 GMT+0300 (East Africa Time)
 
 type AggregateCar {
   count: Int!
@@ -238,7 +238,7 @@ type Chat implements Node {
   createdAt: DateTime!
   updatedAt: DateTime!
   message: String!
-  author(where: UserWhereInput): User
+  author: User
 }
 
 """A connection to a list of items."""
@@ -478,28 +478,28 @@ scalar Long
 type Mutation {
   createPost(data: PostCreateInput!): Post!
   createChat(data: ChatCreateInput!): Chat!
-  createCar(data: CarCreateInput!): Car!
   createUser(data: UserCreateInput!): User!
+  createCar(data: CarCreateInput!): Car!
   updatePost(data: PostUpdateInput!, where: PostWhereUniqueInput!): Post
   updateChat(data: ChatUpdateInput!, where: ChatWhereUniqueInput!): Chat
-  updateCar(data: CarUpdateInput!, where: CarWhereUniqueInput!): Car
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
+  updateCar(data: CarUpdateInput!, where: CarWhereUniqueInput!): Car
   deletePost(where: PostWhereUniqueInput!): Post
   deleteChat(where: ChatWhereUniqueInput!): Chat
-  deleteCar(where: CarWhereUniqueInput!): Car
   deleteUser(where: UserWhereUniqueInput!): User
+  deleteCar(where: CarWhereUniqueInput!): Car
   upsertPost(where: PostWhereUniqueInput!, create: PostCreateInput!, update: PostUpdateInput!): Post!
   upsertChat(where: ChatWhereUniqueInput!, create: ChatCreateInput!, update: ChatUpdateInput!): Chat!
-  upsertCar(where: CarWhereUniqueInput!, create: CarCreateInput!, update: CarUpdateInput!): Car!
   upsertUser(where: UserWhereUniqueInput!, create: UserCreateInput!, update: UserUpdateInput!): User!
+  upsertCar(where: CarWhereUniqueInput!, create: CarCreateInput!, update: CarUpdateInput!): Car!
   updateManyPosts(data: PostUpdateInput!, where: PostWhereInput): BatchPayload!
   updateManyChats(data: ChatUpdateInput!, where: ChatWhereInput): BatchPayload!
-  updateManyCars(data: CarUpdateInput!, where: CarWhereInput): BatchPayload!
   updateManyUsers(data: UserUpdateInput!, where: UserWhereInput): BatchPayload!
+  updateManyCars(data: CarUpdateInput!, where: CarWhereInput): BatchPayload!
   deleteManyPosts(where: PostWhereInput): BatchPayload!
   deleteManyChats(where: ChatWhereInput): BatchPayload!
-  deleteManyCars(where: CarWhereInput): BatchPayload!
   deleteManyUsers(where: UserWhereInput): BatchPayload!
+  deleteManyCars(where: CarWhereInput): BatchPayload!
 }
 
 enum MutationType {
@@ -535,7 +535,7 @@ type Post implements Node {
   title: String!
   text: String!
   nameFile: String!
-  author(where: UserWhereInput): User
+  author: User
   cars(where: CarWhereInput, orderBy: CarOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Car!]
 }
 
@@ -867,16 +867,16 @@ input PostWhereUniqueInput {
 type Query {
   posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post]!
   chats(where: ChatWhereInput, orderBy: ChatOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Chat]!
-  cars(where: CarWhereInput, orderBy: CarOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Car]!
   users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
+  cars(where: CarWhereInput, orderBy: CarOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Car]!
   post(where: PostWhereUniqueInput!): Post
   chat(where: ChatWhereUniqueInput!): Chat
-  car(where: CarWhereUniqueInput!): Car
   user(where: UserWhereUniqueInput!): User
+  car(where: CarWhereUniqueInput!): Car
   postsConnection(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): PostConnection!
   chatsConnection(where: ChatWhereInput, orderBy: ChatOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ChatConnection!
-  carsConnection(where: CarWhereInput, orderBy: CarOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CarConnection!
   usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
+  carsConnection(where: CarWhereInput, orderBy: CarOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CarConnection!
 
   """Fetches an object given its ID"""
   node(
@@ -893,8 +893,8 @@ enum Role {
 type Subscription {
   post(where: PostSubscriptionWhereInput): PostSubscriptionPayload
   chat(where: ChatSubscriptionWhereInput): ChatSubscriptionPayload
-  car(where: CarSubscriptionWhereInput): CarSubscriptionPayload
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
+  car(where: CarSubscriptionWhereInput): CarSubscriptionPayload
 }
 
 type User implements Node {
