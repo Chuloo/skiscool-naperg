@@ -13,11 +13,13 @@ import { ApolloLink, Observable, split } from "apollo-link";
 import { WebSocketLink } from "apollo-link-ws";
 //import { createUploadLink } from "apollo-upload-client"; 
 import { getMainDefinition } from "apollo-utilities"; 
+import Zepto from './components/zepto'
 
 import 'tachyons'
 import './index.css'
 import App from './components/nav/layout/App'
 
+global.Zepto = Zepto
 
 console.log("AUTH_TOKEN",AUTH_TOKEN)
 const wsLink = new WebSocketLink({

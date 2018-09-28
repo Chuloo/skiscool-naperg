@@ -1,6 +1,7 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
+import Button from '../../reactLIB/Button'
 import axios from 'axios'
 
 class Api extends React.Component {
@@ -24,7 +25,7 @@ class Api extends React.Component {
         <div className='paperOut'>
           <Paper className='paperIn'>
             <h2>API</h2>
-            <Button onClick={()=>this.callApi()} variant='raised' color='primary'>
+            <Button onClick={()=>this.callApi()} waves='light' teal>
               Call API
             </Button>
             {this.state.message && (

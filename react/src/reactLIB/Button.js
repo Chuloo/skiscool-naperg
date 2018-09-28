@@ -4,6 +4,7 @@ import constants from './constants';
 import cx from 'classnames';
 import Icon from './Icon';
 import idgen from './idgen';
+let Zepto = global.Zepto
 
 class Button extends Component {
   constructor(props) {

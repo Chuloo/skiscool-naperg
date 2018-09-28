@@ -12,7 +12,8 @@ module.exports = {
         "react/prop-types": "off",
         "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
         "padded-blocks": ["error", "never"],
-        "semi": ["error", "never"]
+        "semi": ["error", "never"],
+        "import/first": "off"
     },
     "plugins": [
       "react"
