@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import { AUTH_TOKEN } from '../../constants/constants'
 import Paper from '@material-ui/core/Paper'
-import Button from '@material-ui/core/Button'
+import Button from '../../reactLIB/Button'
 import Loading from '../nav/error/Loading'
 import NotAuth from '../nav/error/NotAuth'
 

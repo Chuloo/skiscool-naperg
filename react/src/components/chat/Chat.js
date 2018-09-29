@@ -1,6 +1,6 @@
 import React from 'react'
 import ImageTemplate from '../nav/ImageTemplate'
-import Card from '@material-ui/core/Card'
+import Card from '../../reactLIB/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import Tooltip from '@material-ui/core/Tooltip'
 import {withRouter} from 'react-router'

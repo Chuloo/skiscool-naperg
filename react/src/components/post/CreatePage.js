@@ -5,7 +5,7 @@ import UploadFile from '../nav/UploadFile'
 import Autocomplete from './Autocomplete'
 import Paper from '@material-ui/core/Paper'
 import { graphql, compose } from 'react-apollo'
-import Button from '@material-ui/core/Button'
+import Button from '../../reactLIB/Button'
 
 class CreatePage extends React.Component {
   state = {

@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql, compose } from 'react-apollo'
 import gql from 'graphql-tag'
 import { withRouter } from 'react-router-dom'
-import Paper from '@material-ui/core/Paper'
+import Card from '../../reactLIB/Card'
 import NotFound from '../nav/error/NotFound'
 import { withApollo } from 'react-apollo'
-import Button from '@material-ui/core/Button'
-import Icon from '@material-ui/core/Icon'
+import Button from '../../reactLIB/Button'
+import Icon from '../../reactLIB/Icon'
 import Loading from '../nav/error/Loading'
 
 class DetailPage extends React.Component {
@@ -27,13 +27,13 @@ class DetailPage extends React.Component {
     return (
       <React.Fragment>
         <div className='paperOut'>
-          <Paper className='paperIn'>
+          <Card className='paperIn'>
         <h1 className='f3 black-80 fw4 lh-solid'>
           {car.name}
         </h1>
         <p className='black-80 fw3'>{car.text}</p>
         {action}
-        </Paper>
+        </Card>
         </div>
       </React.Fragment>
     )

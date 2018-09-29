@@ -2,14 +2,14 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import gql from 'graphql-tag'
 import Paper from '@material-ui/core/Paper'
-import Button from '@material-ui/core/Button'
+import Button from '../../reactLIB/Button'
 import { graphql, compose } from 'react-apollo'
 import { withApollo } from 'react-apollo'
 import FormControl from '@material-ui/core/FormControl'
 import InputLabel from '@material-ui/core/InputLabel'
-import Input from '@material-ui/core/Input'
+import Input from '../../reactLIB/Input'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import Icon from '@material-ui/core/Icon'
+import Icon from '../../reactLIB/Icon'
 
 class CreateChat extends React.Component {
   state = {

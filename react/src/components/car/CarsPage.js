@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router'
 import CarsPageList from './CarsPageList'
-import Button from '@material-ui/core/Button'
-import Paper from '@material-ui/core/Paper'
+import Button from '../../reactLIB/Button'
+import Card from '../../reactLIB/Card'
 import ArrowOrderBy from './ArrowOrderBy'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import Input from '@material-ui/core/Input'
-import Icon from '@material-ui/core/Icon'
+import Input from '../../reactLIB/Input'
+import Icon from '../../reactLIB/Icon'
 import NotAuth from '../nav/error/NotAuth'
 import { AUTH_TOKEN } from '../../constants/constants'
 
@@ -36,7 +36,7 @@ class CarsPage extends Component {
     return (
       <React.Fragment>
       <div className='paperOut'>
-        <Paper className='paperIn'>
+        <Card className='paperIn'>
           <Input
             onChange={e => this.setState({query: e.target.value})}
             value={this.state.query}
@@ -68,7 +68,7 @@ class CarsPage extends Component {
           showMore={true}
           elemClicked={this.elemClicked.bind(this)}
           orderBy={this.state.orderBy}/>
-        </Paper>
+        </Card>
       </div>
     </React.Fragment>
   )

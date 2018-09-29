@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router'
-import Button from '@material-ui/core/Button'
+import Button from '../../../reactLIB/Button'
 import ImageTemplate from '../ImageTemplate'
 import MenuItem from '@material-ui/core/MenuItem'
 import {AUTH_TOKEN} from '../../../constants/constants'

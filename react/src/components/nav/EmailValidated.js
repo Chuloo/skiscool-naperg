@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { AUTH_TOKEN } from '../../constants/constants'
 import Paper from '@material-ui/core/Paper'
-import Icon from '@material-ui/core/Icon'
+import Icon from '../../reactLIB/Icon'
 import { graphql, compose } from 'react-apollo'
 import gql from 'graphql-tag'
 import Loading from './error/Loading'

@@ -2,7 +2,7 @@ import React from 'react'
 import {graphql} from 'react-apollo'
 import gql from 'graphql-tag'
 import NotAuth from '../nav/error/NotAuth'
-import Icon from '@material-ui/core/Icon'
+import Icon from '../../reactLIB/Icon'
 import Loading from '../nav/error/Loading'
 
 class UsersPageList extends React.Component {
